@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>test</title>
+    <script type="text/javascript">
+        function over(element){
+            element.style.backgroundColor="blue";
+        }
+        function out(element){
+            element.style.backgroundColor="red";
+        }
+		var pass=document.getElementById("pass").innerHTML
+        // function href(){
+        //     window.open('./login/'+pass, '', config='height=800px,width=800px');
+        // }
+    </script>
+</head>
+<body style="background-color: black;">
+    <div style="text-align: center;color: #000;">
+        <div style="margin-top:150px;" id="pass">{{ password }}</div>
+        <div style="color: red;font-weight:bold;font-size:50px;">password</div>
+        <div style="height: 10px;"></div>
+        <input type="password" name="user" id="password" style="width: 300px;height: 30px;"/><br />
+        <div style="height: 20px;" /><br />
+        <input type="submit" name="send" id="submit" onclick="change();href();" style="font-size: 20px;color: white;background-color: red;height: 50px;width: 80px;border-radius:10px;" onmouseover="over(this);" onmouseout="out(this);" value="OK" />
+    </div>
+</body>

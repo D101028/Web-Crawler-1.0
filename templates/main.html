@@ -1,0 +1,53 @@
+{% if right_signal %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>LKK</title>
+    <link rel="icon" href="/files/icon.ico" type="image/x-icon"/>
+    <script type="text/javascript">
+        function redirect(){
+            window.location.href="/download/"
+        }
+    </script>
+    <style type="text/css">
+        #user{
+            width: 300px;
+            height: 30px;
+            font-size: 25px;
+        }
+        #send{
+            height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:#000">
+    <div style="text-align: center;color: #000;">
+        <div style="margin-top:150px;" id="pass"></div>
+        <div style="color: red;font-weight:bold;font-size:50px;">Enter successful!</div>
+        <div style="height: 10px;"></div><br/>
+        <button id="btn1" onclick="redirect();">option01</button>
+        <button>option02</button>
+        <button>option03</button>
+    </div>
+</body>
+</html>
+{% else %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>LKK - error</title>
+    <script type="text/javascript">
+        setTimeout(function(){
+            window.location.href="/"
+        },5000);
+    </script>
+</head>
+<body>
+    <h1>Something went wrong</h1>
+    <p></p>
+</body>
+</html>
+{% endif %}

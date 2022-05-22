@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" href="/files/icon.ico" type="image/x-icon"/>
+<script type="text/javascript">
+    function setSize(){
+        var screenx=document.documentElement.clientWidth;
+        // var screeny=document.documentElement.clientHeight;
+        var mainDiv=document.getElementById("main_div");
+        if (screenx<=800){
+            mainDiv.style.width="640px";
+        }else if(screenx>=1200){
+            mainDiv.style.width="960px";
+        }else{
+            mainDiv.style.width="80%";
+        }
+    }
+    window.addEventListener('resize', setSize);
+</script>
+<style type="text/css">
+.main{
+    border-radius:20px;
+    margin:0 auto;
+    opacity: 0.9;
+    background-color:rgb(241, 183, 183);
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.logo{
+    /* 沒有彈性，固定尺寸*/
+    flex:none;width:100px;
+    background-color: #ffcccc;
+}
+.menu{
+    /* 盡量把容器的空間張滿*/
+    flex:auto;
+    background-color:#ccccff;
+}
+.user{
+    flex:none;width:100px;
+    background-color:#ccffcc;
+}
+nav{
+    display:flex;
+}
+</style>
+</head>
+<body onload="setSize();">
+<div class="main" id="main_div">
+    <!-- <img id="head_ptc" src="/files/download_head.png">  -->
+    <nav>
+        <div class="logo box">Logo</div>
+        <div class="menu box">Menu</div>
+        <div class="user box">User</div> 
+    </nav>
+</div>
+</body>
+</html>

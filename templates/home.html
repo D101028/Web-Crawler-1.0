@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>LKK</title>
+    <link rel="icon" href="/files/icon.ico" type="image/x-icon"/>
+    <script type="text/javascript">
+        // function redirect(){
+        //     window.location.href="./download/"
+        // }
+        var handler=function(e){
+            if (e.keyCode==13){
+                input_signal();
+            }
+        }
+        function input_signal(){
+            var user_input=document.getElementById("user").value;
+            if(user_input!=""){
+                window.location.href="/signal/"+user_input;
+            }
+        }
+        document.addEventListener("keydown", handler);
+    </script>
+    <style type="text/css">
+        #user{
+            width: 300px;
+            height: 30px;
+            font-size: 25px;
+        }
+        #send{
+            height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:#000">
+    <!-- <button onclick="redirect();">download page</button> -->
+    <div style="text-align: center;color: #000;">
+        <div style="margin-top:150px;" id="pass"></div>
+        <div style="color: red;font-weight:bold;font-size:50px;">Enter the signal.</div>
+        <div style="height: 10px;"></div>
+        <input id="user" type="text"/><br/>
+        <div height="10"></div><br/>
+        <button id="send" onclick="input_signal();">OK</button>
+    </div>
+</body>
+</html>

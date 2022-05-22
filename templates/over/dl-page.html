@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scail=1"/>
+    <title>gentleman-only</title>
+    <style type="text/css">
+        .all{
+            background-color:black;
+            color:white;
+            font-family:'微軟正黑體'
+        }
+        .top{
+            margin-top:150px;
+        }
+        .title{
+            font-weight:bold;
+            font-size:20px;
+            margin-top:0px;
+            text-align: center
+        }
+        .input{
+            margin-top:10px;
+            text-align: center
+        }
+        #btn{
+            background-color:red;
+            text-align: center;
+        }
+        #btn:hover{
+            background-color:blueviolet;
+        }
+        .dl-top{
+            width: auto;
+            height: 20;
+            color: white;
+            font-size: 10px;
+            text-align: center;
+        }
+        @media screen and (max-width:600px){
+            .all{
+            background-color:black;
+            color:white;
+            font-family:'微軟正黑體'
+            }
+            .top{
+                margin-top:250px;
+            }
+            .title{
+                font-size:30px;
+                margin-top:0px;
+            }
+            .input{
+                margin-top:10px;
+            }
+            #btn{
+                margin-top:10px;
+                /* height:40px;
+                width:60px; */
+            }
+            #btn:hover{
+                background-color:blueviolet;
+            }
+        } /* 加入手機上的配置 */
+    </style>
+    <script>
+        function send(){
+            // const num=document.getElementById('input').value
+        }
+        function href(){
+            window.open("./loading")
+        }
+    </script>
+    <!--網頁標題左側顯示-->
+    <link rel="icon" href="./ico/dl-nhentai.ico" type="image/x-icon">
+    <!--收藏夾顯示圖示-->
+    <link rel="shortcut icon" href="./ico/dl-nhentai.ico" type="image/x-icon">
+</head>
+<body class="all">
+    <div class="top"></div>
+    <div class="title">
+        What Number Do You Want ? 
+    </div>
+    <div class="input">
+    <form method="POST">
+        <input type="text" name="user" id="input" placeholder="eg. 228922" style="width: 300px;"/>
+        <input type="submit" name="send" id="btn" onclick="send();" value="送出">
+    </form>
+    </div>
+    {% if message_t %}
+    <div class="download" style="text-align: center;">
+        <h3 class="dl-top">DOWNLOAD</h3>
+        <!-- <form method="POST" style="text-align: center;"> -->
+            <div style="color:yellow;">{{ message_n }}</div>
+            <div style="color:yellow;">{{ message_t }}</div>
+            <div style="color:yellow;">{{ message_p }}</div>
+            <input onclick="href()" type="submit" name="dlbtn" id="btn" value="download">
+        <!-- </form> -->
+    </div>
+    {% else %}
+    {% endif %}
+</body>
+</html>

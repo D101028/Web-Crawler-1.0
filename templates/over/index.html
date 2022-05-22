@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home</title>
+    <script type="text/javascript">
+        function over(element){
+            element.style.backgroundColor="#123456";
+        }
+        function out(element){
+            element.style.backgroundColor="red";
+        }
+        function onclick(element){
+            element.style.backgroundColor="#456789";
+        }
+    </script>
+    <style type="text/css">
+        #submit{
+            font-size: 20px;
+            color: white;
+            background-color: red;
+            height: 50px;width: 80px;
+            border-radius:10px;
+        }
+    </style>
+    <!--網頁標題左側顯示-->
+    <link rel="icon" href="./ico/dl-nhentai.ico" type="image/x-icon">
+    <!--收藏夾顯示圖示-->
+    <link rel="shortcut icon" href="./ico/dl-nhentai.ico" type="image/x-icon">
+</head>
+<body style="background-color: black;">
+    <div style="text-align: center;color: #000;">
+        <div style="margin-top:150px;" id="pass"></div>
+        <div style="color: red;font-weight:bold;font-size:50px;">password</div>
+        <div style="height: 10px;"></div>
+        <form method="POST">
+            <input type="password" name="user" id="password" style="width: 300px;height: 30px;"/><br />
+            <div style="height: 20px;" /><br />
+            <input type="submit" name="send" id="submit" onclick="onclick();" onmouseover="over(this);" onmouseout="out(this);" value="OK" />
+        </form>
+    </div>
+</body>
+</html>

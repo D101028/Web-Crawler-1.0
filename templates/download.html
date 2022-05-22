@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" href="/files/icon.ico" type="image/x-icon"/>
+<script type="text/javascript">
+    function getScrollTop(){
+        var bodyTop = 0;
+        if (typeof window.pageYOffset != "undefined") {
+            bodyTop = window.pageYOffset;
+
+        } else if (typeof document.compatMode != "undefined"
+                    && document.compatMode != "BackCompat") {
+            bodyTop = document.documentElement.scrollTop;
+
+        } else if (typeof document.body != "undefined") {
+            bodyTop = document.body.scrollTop;
+        }
+        return bodyTop;
+    }
+    function setSize(){
+        var screenx=document.documentElement.clientWidth;
+        // var screeny=document.documentElement.clientHeight;
+        var mainDiv=document.getElementById("main_div");
+        if (screenx<=800){
+            mainDiv.style.width="640px";
+        }else if(screenx>=1200){
+            mainDiv.style.width="960px";
+        }else{
+            mainDiv.style.width="80%";
+        }
+    }
+    function bodyOnloaded(){
+        var button=document.getElementById("button");
+        mouseAni(button);
+    }
+    window.addEventListener('resize', setSize);
+    function fixNav(){
+        var nav=document.getElementById("dropdowns");
+        if (getScrollTop()>=50){
+            nav.classList.add("navFixed");
+        }else{
+            nav.classList.remove("navFixed");
+        }
+    }
+    window.addEventListener('scroll', fixNav);
+    function mouseOver(){
+        this.style.backgroundColor="rgb(252, 30, 30)";
+    }
+    function mouseOut(){
+        this.style.backgroundColor="red";
+    }
+    function mouseDown(){
+        this.style.backgroundColor="rgb(251, 17, 17)";
+    }
+    function mouseAni(e){
+        e.addEventListener('mouseover', mouseOver);
+        e.addEventListener('mouseout', mouseOut);
+        e.addEventListener('mousedown', mouseDown);
+        e.addEventListener('mouseup', mouseOver);
+    }
+</script>
+<style type="text/css">
+    nav{   
+        position: absolute;      
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        display:flex;
+    }
+    .navFixed{
+        z-index: 10;          
+        position: fixed;      
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        min-width: 100%;
+    }
+    nav>div{
+        opacity:0.8;
+        font-family: Microsoft JhengHei;
+        color:white;
+        background: linear-gradient(rgb(0, 0, 0), rgb(91, 90, 89));;
+        text-align: center;
+        vertical-align:middle;
+        line-height:50px; /* 與logo一樣高 */
+    }
+    nav>div>img{
+        height: 50px;
+    }
+    .logo{
+        /* 沒有彈性，固定尺寸*/
+        flex:none;
+        width:auto;height: 50px;
+        /* background-color: #ffcccc; */
+    }
+    .menu{
+        /* 盡量把容器的空間張滿*/
+        flex:auto;
+        /* background-color:#ccccff; */
+    }
+    .user{
+        flex:none;width:100px;
+        /* background-color:#ccffcc; */
+    }
+    .main{
+        border-radius:20px;
+        /* margin:0 auto; */
+        margin-left:50px;
+        margin-top:80px;
+        opacity: 0.9;
+        background-color:white;
+        height: 1000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .user_input{
+        display: flex;
+        margin-left:20px;
+    }
+    #user{
+        flex:none;
+        width: 300px;
+        border-radius: 5px;
+    }
+    #button{
+        flex:none;
+        width:auto;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: red;
+        cursor:pointer;
+    }
+</style>
+</head>
+<body background="/files/background.png" onload="setSize();bodyOnloaded();">
+<nav id="dropdowns">
+    <div class="logo"><img src="/files/download_head.png"></div>
+    <div class="menu">Menu</div>
+    <div class="user">User</div> 
+</nav>
+<div class="main" id="main_div">
+    <div class="tamplate_head" style="height:100px;"></div>
+    <div>Do not use in a commercial way.</div>
+    <div class="user_input">
+        <input id="user" type="text" />
+        <button class="user_input" id="button">Send</button>
+    </div>
+    <div>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        Hello<br/>
+        
+    </div>
+</div>
+</body>
+</html>

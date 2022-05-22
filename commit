@@ -1,0 +1,52 @@
+git remote add origin https://github.com/D101028/Web-Crawler-1.0.git
+git branch -M main
+git push -u origin main
+
+
+
+最近經常要更新github上已有專案的**，這裡對一些命令進行記錄
+
+1.檢視狀態：
+
+git status
+2.從遠端拉取最新**（一般不是手賤在github上修改readme檔案，如果沒這一步會報錯）
+$ git remote -v 檢視github上的倉庫地址
+$ git pull origin master + 倉庫地址
+
+注：刪除專案檔案，github是不能刪除資料夾的，只能把專案拉到本地刪除再更新,對專案操作後都要commit -m提交一下說明
+$ git rm -r –cached 目標資料夾
+$ git commit -m ‘刪除了…..’
+
+4.提交**：
+git commmit -m “更新說明”
+5.將更新的**上傳到github：
+git push origin master
+6.將本地專案與github連線起來：
+git remote -v 檢視github上的倉庫地址
+git remote add origin +地址
+
+7.專案初次提交到github時：
+echo “#**” >> readme.md
+git init
+
+git add readme.md
+
+git commit -m “first commit”
+
+git remote add origin +地址
+
+git push -u origin master
+
+8、撤銷 某次操作，但是此次操作之前和之後的commit和history都會保留，並且把這次撤銷作為一次最新的提交。
+git revert head #撤銷前一次提交
+git revert head^ #撤銷前前一次提交
+
+git revert head~n #撤回前n+1次提交
+
+git revert 版本號 （eg：e3fd11233334b535640920e7d350a941b4801d5a） #撤銷指定版提交。
+
+git revert是提交一個新的版本，將需要revert的版本的內容再反向修改回去，版本會遞增，不影響之前提交的內容。
+我們只需要執行：
+
+git revert head
+git push

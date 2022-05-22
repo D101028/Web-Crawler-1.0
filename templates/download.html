@@ -59,6 +59,17 @@
         e.addEventListener('mousedown', mouseDown);
         e.addEventListener('mouseup', mouseOver);
     }
+    function sendData(){
+        var userSelect=document.getElementById("web_select").value;
+        var userInput=document.getElementById("user").value;
+        if (userSelect=="nhentai"){
+
+        }else if(userSelect=="wnacg"){
+
+        }else if(userSelect=="avbebe comic"){
+
+        }
+    }
 </script>
 <style type="text/css">
     nav{   
@@ -117,7 +128,6 @@
     }
     .user_input{
         display: flex;
-        margin-left:20px;
     }
     #user{
         flex:none;
@@ -143,10 +153,16 @@
 </nav>
 <div class="main" id="main_div">
     <div class="tamplate_head" style="height:100px;"></div>
-    <div>Do not use in a commercial way.</div>
+    <div>Do not use it in a commercial way.</div>
     <div class="user_input">
+        <select name="website" id="web_select">
+            <option>nhentai</option>
+            <option>wnacg</option>
+            <option>avbebe comic</option>
+        </select>
         <input id="user" type="text" />
-        <button class="user_input" id="button">Send</button>
+        <div style="width:20px;"></div>
+        <button class="user_input" id="button" onclick="sendData();">Send</button>
     </div>
     <div>
         Hello<br/>

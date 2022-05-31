@@ -1,6 +1,6 @@
 from statistics import mode
 from flask import Flask, render_template, make_response, request, url_for, redirect
-from function import function as f
+from function.function import *
 import json
 with open("./setting/setting.json", mode="rb") as file:
     set_data=json.loads(file.read())
